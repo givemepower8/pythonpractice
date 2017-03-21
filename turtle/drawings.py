@@ -2,35 +2,37 @@
 basic drawing
 https://docs.python.org/3/library/turtle.html
 """
+import turtle
 
-from turtle import * 
 
 def draw_star():
     """
     draw a five pointed star
-    """      
-    color('red', 'yellow')
-    begin_fill()
+    """
+    turtle.color('red', 'yellow')
+    turtle.begin_fill()
     while True:
-        forward(200)
-        right(144) # 144 - 5 pointed, 120 - 3
-        if abs(pos()) < 1:
+        turtle.forward(200)
+        turtle.right(144) # 144 - 5 pointed, 120 - 3
+        if abs(turtle.pos()) < 1:
             break
-    end_fill()
-    done()
+    turtle.end_fill()
+    turtle.done()
+
 
 def draw_star2():
     """
     draw a star
-    """      
-    color('red', 'yellow')
-    begin_fill()
+    """
+    turtle.color('red', 'yellow')
+    turtle.begin_fill()
     while True:
-        forward(200)
-        left(170)
-        if abs(pos()) < 1:
+        turtle.forward(200)
+        turtle.left(170)
+        if abs(turtle.pos()) < 1:
             break
-    end_fill()
-    done()
+    turtle.end_fill()
+    turtle.done()
 
 draw_star()
+draw_star2()
